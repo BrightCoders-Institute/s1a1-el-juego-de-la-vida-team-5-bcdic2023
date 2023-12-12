@@ -30,7 +30,29 @@ class tablero {
         console.log('\n');
     }
 
-    
+    _reglas() {
+        const nuevoTablero = new Array(this._filas);
+        for (let i = 0; i < this._filas; i++) {
+        nuevoTablero[i] = new Array(this._columnas);
+        
+        for (let j = 0; j < this._columnas; j++){
+        const vecinos = this._contarVecino(i, j);
+        
+        //1. Cualquier célula viva con menos de dos vecinos vivos muere, como si fuera por falta de población.
+        //2. Cualquier célula viva con más de tres vecinos vivos muere, como si fuera por sobre-población.
+        //3. Cualquier célula viva con dos o tres vecinos vivos sobrevive a la siguiente generación.
+        if (this._tablero[i][j] == 1){
+        nuevoTablero[i][j] = vecinos < 2 || vecinos > 3 ? 0 : 1;
+        }
+        else {
+        //4. Cualquier célula muerta con exactamente tres vecinos vivos se convierte en una célula viva.
+        
+        nuevoTablero[i][j] = vecinos === 3 ? 1 : 0;
+        }
+        }
+        }
+        this._tablero = nuevoTablero;
+        }
 }
 
 let grid = new tablero(5, 5);
