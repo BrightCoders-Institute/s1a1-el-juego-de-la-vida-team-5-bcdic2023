@@ -53,7 +53,24 @@ class tablero {
         }
         this._tablero = nuevoTablero;
         }
+
+    _contarVecino(x, y) {
+            let vecinos = 0;
+            
+            for (let i = -1; i <= 1; i++){
+                for (let j = -1; j <= 1; j++){
+                    const filaVecino = x + i;
+                     const columnaVecino = y + j;
+                if (filaVecino >= 0 && filaVecino < this._filas && columnaVecino >= 0 && columnaVecino < this._columnas){
+                    vecinos += this._tablero[filaVecino][columnaVecino];
+                         }
+                    }
+                 }
+            vecinos -= this._tablero[x][y];
+            return vecinos;
+            }
 }
+
 
 let grid = new tablero(5, 5);
 console.log(grid._imprimirTablero());
