@@ -6,13 +6,15 @@
 
 This README would normally document whatever steps are necessary to get the application up and running.
 
-Things you may want to cover:
+##EL JUEGO DE LA VIDA
 
-- Title or Project Name
-- Table of contents
-- Description. A brief description of what the project is about
+- El proyecto del juego de la vida consiste en celulas que viven o mueren dependiendo de los vecinos que tengan, como solucion nosotros decidimos representar a las celulas vivas y muertas en el tablero con 0's y 1's para facilitar el conteo de los vecinos de una celula y asi saber si debe morir o vivir dependiendo de las reglas establevidas.
+
 - How to Install and Run the Project.
-- How to Use the Project.
-- Credits
-- Badges
-  
+  El proyecto se debe correr desde la consola mediante Node
+
+##Credits
+_-Roberto Salmerón
+-Enrique Comparán
+-José Ocampo
+-Oscar Guzman_
