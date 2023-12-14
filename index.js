@@ -81,3 +81,5 @@ console.log('Segunda Generacion \n');
 grid._reglas();
 // console.log(grid._imprimirTablero())
 console.log(grid._tablero);
+
+module.exports = tablero;
