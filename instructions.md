@@ -13,7 +13,7 @@
 - [Requerimientos funcionales](#requerimientos-funcionales)
   - [Pistas](#pistas)
 - [Recursos](#recursos)
-  
+
 # El Juego de la vida
 
 ## Objetivos
@@ -103,6 +103,7 @@ Debes escribir un programa que acepte una cuadrícula arbitraria de células y m
 ### Pistas
 
 La posición inicial de entrada podría ser un archivo de texto ó string que se vea así:
+
 ```
 Generación 1:
 4 8
@@ -111,7 +112,9 @@ Generación 1:
 ...**...
 ........
 ```
+
 Y la salida podría verse así:
+
 ```
 Generación 2:
 4 8
